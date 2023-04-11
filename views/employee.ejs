@@ -1,0 +1,34 @@
+
+<h3 class="text-center mt-3" style="color: white;" >All Employees</h3>
+
+<div class="container mt-4 " >
+
+    <table class="table table-striped table-hover" style="color: white;">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">isAdmin</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for(let i=0;i < employees.length;i++){ %>
+                <tr>
+                <td><%=employees[i].name %></td>
+                <td><%=employees[i].email %></td>
+                <td><%=employees[i].password %></td>
+                <td><%=employees[i].isAdmin %></td>
+                <td>
+                    <a href="/admin/delete-employee/<%=employees[i]._id%>" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+

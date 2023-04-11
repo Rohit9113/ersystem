@@ -1,0 +1,48 @@
+<header id="layout-header" class="bg-dark">
+    <nav>
+
+        <div class="mini-logo">
+            <p>
+                <a style="    font-family: fantasy;
+                font-weight: 500"  href="/">ERSystem</a>
+            </p>
+        </div>
+
+        <div class="auth-links">
+
+            <ul>
+                <% if(locals.user && !locals.user.isAdmin){ %>
+                    <li>
+                        <a  href="#"><%= user.name %></a>
+                    </li>
+                    <li>
+                        <a  href="/users/sign-out">Log Out</a>
+                    </li>
+                    
+                <% }else if(locals.user && locals.user.isAdmin){ %>
+                    <li>
+                        <a  href="/admin/">Assign Work</a>
+                    </li>
+                    <li>
+                        <a  href="/admin/employees">Employees</a>
+                    </li>
+                    <li>
+                        <a  href="/users/sign-up">Register</a>
+                    </li>
+                    <li>
+                        <a  href="/users/sign-out">Log Out</a>
+                    </li>
+                <% }else{ %>
+                    <li>
+                        <a  href="/users/sign-in">Log In</a>
+                    </li>
+                    <li>
+                        <a  href="/users/sign-up">Sign Up</a>
+                    </li>
+                <% } %>
+            </ul>  
+
+        </div>
+    
+    </nav>
+</header>

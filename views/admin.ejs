@@ -1,0 +1,75 @@
+
+
+
+<div class="container-fluid mt-4">
+    <h2 class="text-center" >Assign work to employee</h2>
+
+    <div class="container d-flex justify-content-between mt-4">
+        <div class="row col-md-6 card mb-3 ">
+            <h4 class="text-center mt-3">Set Reviewers</h4>
+            <hr>
+
+            <form method="POST" action="/admin/set-Reviewers" class="mt-2 card-body">
+                <div>
+                    <select class="form-control form-select-lg mb-3" aria-label=".form-select-lg example"
+                        name="Recipient">
+                
+                        <option selected disabled>Select Recipient</option>
+
+                        <% for(let i=0; i < employeeList.length; i++){ %>
+
+                            <option value="<%= employeeList[i].id  %>">
+                                <%= employeeList[i].name %>
+                            </option>
+
+                        <% } %>
+                    </select>
+                </div>
+
+                <div>
+                    
+                    <select class="form-control form-select-lg mb-3" aria-label=".form-select-lg example"
+                        name="Reviewer">
+
+                        <option selected disabled>Select Reviewer</option>
+  
+                        <% for(let i = 0; i < employeeList.length; i++){ %>
+                            <option value="<%= employeeList[i].id %>">
+                                <%= employeeList[i].name %>
+                            </option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="text-center col-6 mx-auto form_button">
+                    <input class="btn btn-primary" type="submit" value="Assign">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="row col-md-6 card mb-3">
+            <h4 class="text-cebter text-center mt-3 ">Assign employees as admin </h4>
+            <hr>
+
+            <form method="POST" action="/admin/newAdmin" class="mt-4">
+                <select class="form-control  mb-3" aria-label=".form-select-lg example"
+                    name="newAdmin">
+
+                    <option selected disabled>Click here...</option>
+                    <% for(let i=0; i < employeeList.length; i++){ %>
+                        <option value="<%= employeeList[i].id %>">
+                            <%= employeeList[i].name %>
+                        </option>
+                    <%}%>
+                </select>
+
+                <div class="text-center col-6 mx-auto form_button">
+                  <input class="btn btn-primary" type="submit" value="Set Admin" />
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

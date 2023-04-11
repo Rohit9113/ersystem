@@ -1,0 +1,20 @@
+#layout-footer {
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background: rgb(0, 0, 0);
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#layout-footer a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+}
+
+#layout-footer .footer-nav ul {
+  list-style: none;
+}

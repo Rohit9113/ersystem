@@ -1,0 +1,5 @@
+body{
+    /* background-image: url('/images/background.jpg'); */
+    
+    background-image: linear-gradient(to right, #ffffff, #000000, #fbfbfb);
+}
