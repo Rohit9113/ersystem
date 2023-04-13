@@ -1,6 +1,6 @@
 # ersystem (Employee Review System)
 
-In this project i have used HTML/CSS, Boostrap, JavaScript, ExpressJs, NodeJs and Mongodb.
+The web application provides the capability for employees to receive and view performance evaluations.
 
 ## Features of NodeJs Application:-
 1. Admin view
@@ -19,7 +19,7 @@ In this project i have used HTML/CSS, Boostrap, JavaScript, ExpressJs, NodeJs an
   2. Install dependencies:- npm install --save
   3. Install Express:- npm install express
   4. Install nodemon:- npm install nodemon
-  4. Run the application: nodemon index.js
+  5. Run the application: nodemon index.js
   
  ## Structure Screenshots
  ![image](https://user-images.githubusercontent.com/78945252/231388280-3a7a72d2-28fd-4a39-bb86-9fdf79911729.png)
